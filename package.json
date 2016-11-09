@@ -1,5 +1,5 @@
 {
-  "name": "blued-activity-stage",
+  "name": "ultron-stage",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.blued.cn/Jarvis/blued-activity-stage.git"
+    "url": "https://github.com/Precursors/ultron-stage.git"
   },
   "author": "",
   "license": "ISC",
