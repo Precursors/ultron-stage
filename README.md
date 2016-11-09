@@ -15,6 +15,7 @@ $ npm i
 $ cd src
 $ npm i
 $ gulp
+$ webpack --config dll.config.js
 $ cd ..
 $ npm start
 ```
