@@ -1,0 +1,42 @@
+.container {
+  position        : relative;
+  background-color: #f3f6fa;
+  background-image: linear-gradient(transparent 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1));
+  background-size : 50px 50px;
+}
+
+.preview {
+  position     : relative;
+  margin-right : 400px;
+  padding-right: 50px;
+}
+
+.tree {
+  position  : absolute;
+  width     : 400px;
+  height    : 100%;
+  right     : 0;
+  top       : 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border    : 1px dotted rgb(6, 22, 37);
+}
+
+.title {
+  $height    : 25px;
+  position   : relative;
+  height     : $height;
+  line-height: $height;
+
+  .tools {
+    display: inline-block;
+    margin : 0 5px;
+    cursor : pointer;
+  }
+}
+
+.toolWrap {
+  position: absolute;
+  right   : 0;
+  top     : 0;
+}

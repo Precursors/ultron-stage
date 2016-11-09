@@ -1,0 +1,9 @@
+options:
+  formatter: json
+  merge-default-rules: false
+files:
+  include: '**/*.s+(a|c)ss'
+  ignore: '**/ignored.s+(a|c)ss'
+rules:
+  no-color-literals: 1
+  no-ids: 2

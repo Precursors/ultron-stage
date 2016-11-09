@@ -1,0 +1,9 @@
+{
+  "nameCn": "文本链接",
+  "type": "Inline",
+  "default": {
+    "text": "Link",
+    "title": "Blued",
+    "href": "#"
+  }
+}

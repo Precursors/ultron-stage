@@ -1,0 +1,32 @@
+{
+  "nameCn": "容器",
+  "type": "Layout",
+  "styles": {
+    "color": {
+      "value": "#000000",
+      "type": "color"
+    },
+    "font-size": {
+      "value": "16px",
+      "type": "size"
+    },
+    "display": {
+      "value": "block",
+      "type": "select",
+      "items": ["block", "inline", "inline-block", "none"]
+    },
+    "width": {
+      "value": "100%",
+      "type": "size"
+    },
+    "height": {
+      "value": "100%",
+      "type": "size"
+    }
+  },
+  "attrs": {
+    "name": {
+      "value": "container"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.element {
+  position: relative;
+}
+
+.title {
+  $height    : 25px;
+  position   : relative;
+  height     : $height;
+  line-height: $height;
+
+  .tools {
+    display: inline-block;
+    margin : 0 5px;
+    cursor : pointer;
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.listitem {
+  margin: 8px 0;
+}
+
+.toolWrap {
+  position: absolute;
+  right   : 0;
+  top     : 0;
+}

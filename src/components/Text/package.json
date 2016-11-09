@@ -1,0 +1,10 @@
+{
+  "nameCn": "文本",
+  "type": "Inline",
+  "attrs": {
+    "text": {
+      "type": "text",
+      "value": "hello world"
+    }
+  }
+}

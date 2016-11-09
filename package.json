@@ -1,0 +1,48 @@
+{
+  "name": "blued-activity-stage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV='local' nodemon --ignore node_modules/ -e js,html,css index.js",
+    "build": "node ./tasks/init-components.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.blued.cn/Jarvis/blued-activity-stage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "co-views": "^2.1.0",
+    "handlebars": "^3.0.3",
+    "hashids": "1.0.2",
+    "koa": "^1.2.0",
+    "koa-body-parser": "^1.1.2",
+    "koa-compose": "^2.4.0",
+    "koa-router": "^5.1.2",
+    "koa-safe-jsonp": "^0.3.1",
+    "koa-static": "^1.5.2",
+    "moment": "^2.13.0",
+    "mysql": "^2.7.0",
+    "only": "0.0.2",
+    "qiniu": "^6.1.8",
+    "redis": "^0.12.1",
+    "thenify-all": "^1.6.0",
+    "urllib": "^2.3.8"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^1.2.0",
+    "eslint": "^3.9.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-react": "^6.4.1",
+    "eslint-plugin-standard": "^2.0.1",
+    "faker": "^3.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

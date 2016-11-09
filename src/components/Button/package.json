@@ -1,0 +1,7 @@
+{
+  "nameCn": "按钮",
+  "type": "Inline",
+  "default": {
+    "text": "Button"
+  }
+}

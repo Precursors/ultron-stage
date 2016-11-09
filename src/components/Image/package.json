@@ -1,0 +1,9 @@
+{
+  "nameCn": "图像",
+  "type": "Inline",
+  "attrs": {
+    "src": {
+      "type": "file"
+    }
+  }
+}
