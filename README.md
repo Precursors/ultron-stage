@@ -19,7 +19,8 @@ $ webpack --config dll.config.js
 $ cd ..
 $ npm start
 ```
-现在，就可以看到效果了（目前还是一个灰常简陋的版本，只有俩组件可以使用。。。Container和Text）
+现在，就可以看到效果了（目前还是一个灰常简陋的版本，只有俩组件可以使用。。。Container和Text）<br/>
+如果npm start启动报错。。应该是本地木有安装 [nodemon](https://www.npmjs.com/package/nodemon) 这个插件，全局安装即可。
 ```
 127.0.0.1:12306
 ```
