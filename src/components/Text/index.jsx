@@ -3,9 +3,9 @@ import {container} from './index.css'
 
 class Text extends Component {
   render () {
-    const {text} = this.props
+    const {text, styles} = this.props
     return (
-      <span className={container}>{text}</span>
+      <span className={container} style={styles}>{text}</span>
     )
   }
 }

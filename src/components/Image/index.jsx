@@ -2,9 +2,9 @@ import React, {Component} from 'react'
 
 class Image extends Component {
   render () {
-    const {src} = this.props
+    const {src, styles} = this.props
     return (
-      <img src={src} />
+      <img src={src} style={styles}/>
     )
   }
 }

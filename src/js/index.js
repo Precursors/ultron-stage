@@ -50,3 +50,23 @@ function groupMapping (mapping) {
 
   return result
 }
+
+/**
+ * 为了实现拖拽上传的，需要将这几个事件禁用掉
+ */
+function initDrapEvent () {
+  document.body.addEventListener('dragleave', (e) => {
+    e.preventDefault()
+  })
+  document.body.addEventListener('drop', (e) => {
+    e.preventDefault()
+  })
+  document.body.addEventListener('dragenter', (e) => {
+    e.preventDefault()
+  })
+  document.body.addEventListener('dragover', (e) => {
+    e.preventDefault()
+  })
+}
+
+initDrapEvent()

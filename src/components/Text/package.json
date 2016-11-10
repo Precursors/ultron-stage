@@ -6,5 +6,48 @@
       "type": "text",
       "value": "hello world"
     }
+  },
+  "styles": {
+    "display": {
+      "value": "block",
+      "type": "select",
+      "items": ["block", "inline", "inline-block", "none"]
+    },
+    "position": {
+      "value": "relative",
+      "type": "select",
+      "items": ["relative", "absolute", "fixed", "none", "static"]
+    },
+    "width": {
+      "value": "100%",
+      "type": "size"
+    },
+    "height": {
+      "value": "100%",
+      "type": "size"
+    },
+    "top": {
+      "value": "auto",
+      "type": "size"
+    },
+    "right": {
+      "value": "auto",
+      "type": "size"
+    },
+    "bottom": {
+      "value": "auto",
+      "type": "size"
+    },
+    "left": {
+      "value": "auto",
+      "type": "size"
+    },
+    "color": {
+      "value": "#000",
+      "type": "color"
+    },
+    "background-color": {
+      "type": "color"
+    }
   }
 }
