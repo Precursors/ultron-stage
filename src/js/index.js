@@ -6,9 +6,23 @@ import _Configuration from '../components/_Configuration'
 window.MAPPING = Mapping
 window.cleanObject = (obj) => {
   if (!obj) return
+  obj = deepCopy({}, obj)
   let result = {}
   Object.keys(obj).forEach(key => {
-    result[key] = obj[key].value
+    switch (obj[key].type) {
+      case 'logogram':
+        let items = obj[key].items
+        // 删掉复合属性
+        delete obj[key]
+        // 对每个属性分别设置
+        Object.entries(items).forEach(([k, v]) => {
+          obj[`${key}-${k}`] = v
+        })
+        // 就是说类似于 padding 会生成
+        // padding-left,padding-right...
+        break
+      default: result[key] = obj[key].value
+    }
   })
 
   return result

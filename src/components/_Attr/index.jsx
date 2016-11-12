@@ -6,7 +6,6 @@ export default class _Preview extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      editing: false,
       tabs: props.tabs || {}
     }
   }
@@ -29,14 +28,15 @@ export default class _Preview extends Component {
   }
 
   render () {
-    let saveData = this.saveData.bind(this)
-    let {state, changeTab} = this
-    let {tabs, editing, cursor} = state
+    let {state, changeTab, saveData} = this
+    let {tabs, cursor} = state
     let keys = Object.keys(tabs).filter(key => tabs[key])
+    saveData = saveData.bind(this)
+    changeTab = changeTab.bind(this)
 
     return (
       <div>
-        <Tabs defaultActiveKey={keys[0]} unmountOnExit={true} animation={true} activeKey={cursor || keys[0]} onSelect={changeTab.bind(this)}>
+        <Tabs defaultActiveKey={keys[0]} unmountOnExit={true} animation={true} activeKey={cursor} onSelect={changeTab}>
           {keys.map((key, index) => {
             let item = tabs[key]
             return (item
@@ -48,8 +48,7 @@ export default class _Preview extends Component {
                       let methods = {}
                       methods.onChange = ({ target: { value: v } }) => {
                         info.value = v
-                        this.setState({editing: true})
-                        this.props.complete(this.state.tabs)
+                        saveData()
                       }
 
                       // 对特殊表单的一些处理
@@ -64,8 +63,7 @@ export default class _Preview extends Component {
                           } else {
                             return
                           }
-                          this.setState({editing: true})
-                          this.props.complete(this.state.tabs)
+                          saveData()
                         }
                       } else if (type === 'file') {
                         methods.openFilePanel = () => {
@@ -74,11 +72,10 @@ export default class _Preview extends Component {
                             onFileChange: (value) => {
                               info.value = value
                               this.setState({
-                                editing: true,
                                 show: false,
-                                onFIleChange: ''
+                                onFileChange: ''
                               })
-                              this.props.complete(this.state.tabs)
+                              saveData()
                             }
                           })
                         }
@@ -94,9 +91,6 @@ export default class _Preview extends Component {
                         </FormGroup>
                       )
                     })}
-                    {editing
-                      ? <Button bsStyle="success" onClick={saveData}>Save</Button>
-                      : <Button disabled>Save</Button>}
                   </Form>
                 </Tab>
               ) : null)
@@ -125,6 +119,9 @@ function getInputType (info, methods) {
           </InputGroup.Button>
           <FormControl type="text" disabled value={info.value} />
         </InputGroup>
+      )
+    case 'logogram':
+      return (<FormControl type={info.itemType} value={info.value} {...methods}/>
       )
     default:
       return <FormControl type={info.type} value={info.value} {...methods}/>

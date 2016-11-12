@@ -9,42 +9,52 @@
   },
   "styles": {
     "display": {
-      "value": "block",
       "type": "select",
+      "value": "block",
       "items": ["block", "inline", "inline-block", "none"]
     },
     "position": {
-      "value": "relative",
       "type": "select",
+      "value": "relative",
       "items": ["relative", "absolute", "fixed", "none", "static"]
     },
     "width": {
-      "value": "100%",
-      "type": "size"
+      "type": "size",
+      "value": "100%"
     },
     "height": {
-      "value": "100%",
-      "type": "size"
+      "type": "size",
+      "value": "100%"
     },
     "top": {
-      "value": "auto",
-      "type": "size"
+      "type": "size",
+      "value": "auto"
     },
     "right": {
-      "value": "auto",
-      "type": "size"
+      "type": "size",
+      "value": "auto"
     },
     "bottom": {
-      "value": "auto",
-      "type": "size"
+      "type": "size",
+      "value": "auto"
     },
     "left": {
-      "value": "auto",
-      "type": "size"
+      "type": "size",
+      "value": "auto"
+    },
+    "padding": {
+      "type": "logogram",
+      "itemType": "size",
+      "items": {
+        "top": "10px",
+        "right": "10px",
+        "bottom": "10px",
+        "left": "10px"
+      }
     },
     "color": {
-      "value": "#000",
-      "type": "color"
+      "type": "color",
+      "value": "#000"
     },
     "background-color": {
       "type": "color"
