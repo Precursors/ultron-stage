@@ -14,8 +14,8 @@ Ultron服务端暂未开发-.-
 $ npm i
 $ cd src
 $ npm i
-$ gulp
 $ webpack --config dll.config.js
+$ gulp
 $ cd ..
 $ npm start
 ```
@@ -26,4 +26,8 @@ $ npm start
 ```
 
 ## Notes
-2016-11-9: 目前项目刚刚起步，只是实现组件的添加删除和组件属性的修改
+2016-11-09: 目前项目刚刚起步，只是实现组件的添加删除和组件属性的修改
+
+## Fix
+
+2018-12-11: 解决因bootstrap.css更新至4.x导致的页面出现bug。（强行指定3.x版本）。
